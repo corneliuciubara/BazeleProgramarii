@@ -1,16 +1,16 @@
 #include <iostream>
-
 using namespace std;
 
 int CIFRA_PARA(int n) {
+    int digit=-1;
     while (n > 0) {
         int cifra = n % 10;
         if (cifra % 2 == 0) {
-            return cifra;
+           digit=cifra; 
         }
         n /= 10;
     }
-    return -1;
+    return digit;
 }
 
 int main() {
