@@ -1,7 +1,16 @@
 #include <iostream>
-#include <cctype> 
+#include <cctype>
 
 using namespace std;
+
+int myisdigit(char caracter1) {
+    if (caracter1 > '0' && caracter1 < '9') {
+    return 1;
+    }
+    else {
+        return 0;
+    }
+}
 
 int main() {
     cout << "Introduceți o secvență de caractere până la caracterul '*':" << endl;
@@ -10,7 +19,7 @@ int main() {
     int numarCifre = 0;
 
     while (cin >> caracter && caracter != '*') {
-        if (isdigit(caracter)) {
+        if (myisdigit(caracter)) {
             numarCifre++;
         }
     }
